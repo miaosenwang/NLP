@@ -18,4 +18,5 @@ class Predict(object):
                     f.write(label.astype(str) + '\n')
 
         print("Done writting test results.")
+        return result
 

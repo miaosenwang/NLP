@@ -3,6 +3,7 @@ from TrainClassifier import TrainClassifier
 from DataSet import DataSet
 from TfidfEmbeddingVectorizer import TfidfEmbeddingVectorizer
 from Predict import Predict
+from sklearn.metrics import precision_recall_fscore_support
 
 if __name__ == "__main__":
     embeddings = GloveHelper.loadGlove("C:\\Code\\Data\\Glove\\glove.6B\\glove.6B.Sample.txt")
@@ -18,6 +19,7 @@ if __name__ == "__main__":
     predictor = Predict(vectorizer, model)
     result = predictor.Run(testData.Data, "C:\Code\Data\MeetingSummary\Ep\PyTestOut.txt")
 
-
+    score = precision_recall_fscore_support(testData.Label, result, average = "binary")
+    print("precision: %.2f \nrecall: %.2f \nfbeta:%.2f" %(score[:3]))
 
 

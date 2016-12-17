@@ -14,10 +14,9 @@ class TfidfEmbeddingVectorizer(object):
 
     def transform(self, X):
         print("transform is called\n")
-        xTokens = []
         tokenizer = TfidfVectorizer().build_tokenizer()
-        for line in X:
-            xTokens.append(tokenizer(line))
+        xTokens = [tokenizer(line) for line in X]
+        
         return np.array([
                 np.mean([self.embeddings[w]
                          for w in words if w in self.embeddings] or
