@@ -1,6 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
-class TfidfEmbeddingVectorizer(object):
+class AverageEmbeddingVectorizer(object):
 
     def __init__(self, embeddings = None):
         self.embeddings = embeddings

@@ -1,7 +1,7 @@
 from GloveHelper import GloveHelper
 from TrainClassifier import TrainClassifier
 from DataSet import DataSet
-from TfidfEmbeddingVectorizer import TfidfEmbeddingVectorizer
+from GloveEmbeddingVectorizer import AverageEmbeddingVectorizer
 from Predict import Predict
 from sklearn.metrics import precision_recall_fscore_support
 
