@@ -10,7 +10,7 @@ if __name__ == "__main__":
     trainData = DataSet()
     trainData.load("C:\Code\Data\MeetingSummary\Ep\R1Train.txt")
 
-    vectorizer = TfidfEmbeddingVectorizer(embeddings)
+    vectorizer = AverageEmbeddingVectorizer(embeddings)
     model = TrainClassifier.Run(trainData.Data, trainData.Label, "model.pkl", vectorizer)
 
     testData = DataSet()

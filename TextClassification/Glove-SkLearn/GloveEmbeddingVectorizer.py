@@ -1,4 +1,8 @@
+import sys
+sys.path.append('../../')
+from TextPreprocess import Preprocessing 
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 import numpy as np
 class AverageEmbeddingVectorizer(object):
 
@@ -14,8 +18,7 @@ class AverageEmbeddingVectorizer(object):
 
     def transform(self, X):
         print("transform is called\n")
-        tokenizer = TfidfVectorizer().build_tokenizer()
-        xTokens = [tokenizer(line) for line in X]
+        xTokens = [Preprocessing.processing(line, remove_stopwords = False) for line in X]
         
         return np.array([
                 np.mean([self.embeddings[w]

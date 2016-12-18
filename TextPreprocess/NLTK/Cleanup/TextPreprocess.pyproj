@@ -3,17 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ec735013-06c0-42fd-be87-e2cf226e69a9</ProjectGuid>
+    <ProjectGuid>caf76279-2e5d-46f9-a681-9624c6bf2170</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TrainTest.py</StartupFile>
-    <SearchPath>..\..\</SearchPath>
+    <StartupFile>TextPreprocess.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>TextClassification</Name>
-    <RootNamespace>TextClassification</RootNamespace>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
-    <InterpreterVersion>3.5</InterpreterVersion>
+    <Name>TextPreprocess</Name>
+    <RootNamespace>TextPreprocess</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,30 +23,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="TextPreprocess.py" />
-    <Compile Include="TrainTest.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CrossValidation.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DataSet.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GloveHelper.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Predict.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GloveEmbeddingVectorizer.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TrainClassifier.py">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.5" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
